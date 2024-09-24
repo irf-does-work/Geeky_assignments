@@ -15,7 +15,7 @@ A. Sum of three numbers
    1. Declare 4 integers NUM1, NUM2, NUM3 and SUM
    2. Read 3 numbers from the user
    3. Set SUM = NUM1 + NUM2 + NUM3
-   4. Print SUM
+   4. Return SUM
       
 B. Sum of squares of 2 numbers
    1. Declare 4 integers NUM1, NUM2, NUM3 and RESULT
@@ -23,7 +23,7 @@ B. Sum of squares of 2 numbers
    3. Set NUM1 = NUM1*NUM1
    4. Set NUM2 = NUM2*NUM2
    5. Set RESULT = NUM1+NUM2
-   6. Print RESULT
+   6. Return RESULT
 
 
 C. Reverse a number
@@ -65,7 +65,7 @@ F. Find the number of occurrences of a character in a given string
    5. Set LOOP=0, COUNT=0
    6. Repeat sub-steps WHILE (LOOP < LENGTH)
       6.1. IF (CHR==STR[LOOP]) , set COUNT = COUNT+1
-   7. Print count
+   7. Return count
 
 
 G. Fibonacci series of numbers
@@ -73,8 +73,12 @@ G. Fibonacci series of numbers
    2. Declare an integer LIMIT
    3. Read LIMIT from user
    4. Print NUM1 and NUM2
-   5. Repeat substeps WHILE (LOOP<=LIMIT)
-      5.1. Set NUM1=NUM2
+   5. Set NEXT=NUM1+NUM2
+   6. Repeat substeps WHILE (LOOP<=LIMIT)
+      6.1 Print NEXT
+      6.2. Set NUM1=NUM2
+      6.3  Set NUM2=NEXT
+      6.4  Set NEXT=NUM1+NUM2
 
 I. Linear search
    1. Declare character KEY,and an integers LENGTH and LOOP
