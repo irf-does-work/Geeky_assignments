@@ -1,0 +1,78 @@
+﻿* Sum of three numbers
+* Sum of squares of two numbers
+* Reverse a number
+* Reverse a string
+* Find the given character in the string, return true or false
+* Find the number of occurrences of a character in a given string
+* Fibonacci series of numbers
+* Tower of Hanoi
+* Linear search
+* Binary search
+* Bubble sort
+
+
+
+
+A. Sum of three numbers
+1. Declare 4 integers NUM1, NUM2, NUM3 and SUM
+2. Read 3 numbers from the user
+3. Set SUM = NUM1 + NUM2 + NUM3
+4. Print SUM
+      
+B. Sum of squares of 2 numbers
+1. Declare 4 integers NUM1, NUM2, NUM3 and RESULT
+2. Read NUM1 and NUM2 from user
+3. Set NUM1 = NUM1*NUM1
+4. Set NUM2 = NUM2*NUM2
+5. Set RESULT = NUM1+NUM2
+6. Print RESULT
+
+
+C. Reverse a number
+1. Declare integers ‘LENGTH’ and ‘LOOP’
+2. Declare an array named ‘NUMBER’ of size ‘LENGTH’
+3. Set LOOP = LENGTH
+4. Read input into ‘NUMBER’ array
+5. Repeat sub-steps WHILE (LOOP >0)
+   5.1. Print NUMBER[i]
+   5.2. Increment LOOP by 1
+
+
+D. Reverse a string
+1. Declare integers ‘LENGTH’ and ‘LOOP’
+2. Declare an array named ‘STRING’ of size ‘LENGTH’
+3. Set LOOP = LENGTH
+4. Read input into ‘STRING’ array
+5. Repeat sub-steps WHILE (LOOP >0)
+   5.1. Print NUMBER[i]
+   5.2. Increment LOOP by 1
+
+
+
+
+E. Find the given character in the string, return true or false
+1. Declare character CHR,and an integers LENGTH and LOOP
+2. Declare an array STR of size LENGTH
+3. Read input string from user into STRG
+4. Read the character to check for into CHR
+5. Set LOOP=0
+6. Repeat sub-steps WHILE (LOOP < LENGTH)
+   6.1. IF (CHR==STR[LOOP]) , return true
+7. Return false
+
+
+
+
+F. Find the number of occurrences of a character in a given string
+1. Declare character CHR,and integers LENGTH, LOOP and COUNT
+2. Declare an array STR of size LENGTH
+3. Read input string from user into STRG
+4. Read the character to check for into CHR
+5. Set LOOP=0, COUNT=0
+6. Repeat sub-steps WHILE (LOOP < LENGTH)
+   6.1. IF (CHR==STR[LOOP]) , set COUNT = COUNT+1
+7. Print count
+
+
+G. Fibonacci series of numbers
+1.
