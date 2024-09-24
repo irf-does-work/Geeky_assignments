@@ -1,0 +1,14 @@
+services:
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    container_name: testserver
+    ports:
+      - "1430:1433"
+    environment:
+      SA_PASSWORD: "Pass@w0rd"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - db_data:/var/opt/mssql
+
+volumes:
+  db_data:  
