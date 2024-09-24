@@ -11,73 +11,105 @@
 * Bubble sort
 
 
-
-
 A. Sum of three numbers
-1. Declare 4 integers NUM1, NUM2, NUM3 and SUM
-2. Read 3 numbers from the user
-3. Set SUM = NUM1 + NUM2 + NUM3
-4. Print SUM
+   1. Declare 4 integers NUM1, NUM2, NUM3 and SUM
+   2. Read 3 numbers from the user
+   3. Set SUM = NUM1 + NUM2 + NUM3
+   4. Print SUM
       
 B. Sum of squares of 2 numbers
-1. Declare 4 integers NUM1, NUM2, NUM3 and RESULT
-2. Read NUM1 and NUM2 from user
-3. Set NUM1 = NUM1*NUM1
-4. Set NUM2 = NUM2*NUM2
-5. Set RESULT = NUM1+NUM2
-6. Print RESULT
+   1. Declare 4 integers NUM1, NUM2, NUM3 and RESULT
+   2. Read NUM1 and NUM2 from user
+   3. Set NUM1 = NUM1*NUM1
+   4. Set NUM2 = NUM2*NUM2
+   5. Set RESULT = NUM1+NUM2
+   6. Print RESULT
 
 
 C. Reverse a number
-1. Declare integers ‘LENGTH’ and ‘LOOP’
-2. Declare an array named ‘NUMBER’ of size ‘LENGTH’
-3. Set LOOP = LENGTH
-4. Read input into ‘NUMBER’ array
-5. Repeat sub-steps WHILE (LOOP >0)
-   5.1. Print NUMBER[i]
-   5.2. Increment LOOP by 1
+   1. Declare integers ‘LENGTH’ and ‘LOOP’
+   2. Declare an array named ‘NUMBER’ of size ‘LENGTH’
+   3. Set LOOP = LENGTH
+   4. Read input into ‘NUMBER’ array
+   5. Repeat sub-steps WHILE (LOOP >0)
+      5.1. Print NUMBER[i]
+      5.2. Increment LOOP by 1
 
 
 D. Reverse a string
-1. Declare integers ‘LENGTH’ and ‘LOOP’
-2. Declare an array named ‘STRING’ of size ‘LENGTH’
-3. Set LOOP = LENGTH
-4. Read input into ‘STRING’ array
-5. Repeat sub-steps WHILE (LOOP >0)
-   5.1. Print NUMBER[i]
-   5.2. Increment LOOP by 1
-
-
+   1. Declare integers ‘LENGTH’ and ‘LOOP’
+   2. Declare an array named ‘STRING’ of size ‘LENGTH’
+   3. Set LOOP = LENGTH
+   4. Read input into ‘STRING’ array
+   5. Repeat sub-steps WHILE (LOOP >0)
+      5.1. Print NUMBER[i]
+      5.2. Increment LOOP by 1
 
 
 E. Find the given character in the string, return true or false
-1. Declare character CHR,and an integers LENGTH and LOOP
-2. Declare an array STR of size LENGTH
-3. Read input string from user into STRG
-4. Read the character to check for into CHR
-5. Set LOOP=0
-6. Repeat sub-steps WHILE (LOOP < LENGTH)
-   6.1. IF (CHR==STR[LOOP]) , return true
-7. Return false
-
-
+   1. Declare character CHR,and an integers LENGTH and LOOP
+   2. Declare an array STR of size LENGTH
+   3. Read input string from user into STRG
+   4. Read the character to check for into CHR
+   5. Set LOOP=0
+   6. Repeat sub-steps WHILE (LOOP < LENGTH)
+      6.1. IF (CHR==STR[LOOP]) , return true
+   7. Return false
 
 
 F. Find the number of occurrences of a character in a given string
-1. Declare character CHR,and integers LENGTH, LOOP and COUNT
-2. Declare an array STR of size LENGTH
-3. Read input string from user into STRG
-4. Read the character to check for into CHR
-5. Set LOOP=0, COUNT=0
-6. Repeat sub-steps WHILE (LOOP < LENGTH)
-   6.1. IF (CHR==STR[LOOP]) , set COUNT = COUNT+1
-7. Print count
+   1. Declare character CHR,and integers LENGTH, LOOP and COUNT
+   2. Declare an array STR of size LENGTH
+   3. Read input string from user into STRG
+   4. Read the character to check for into CHR
+   5. Set LOOP=0, COUNT=0
+   6. Repeat sub-steps WHILE (LOOP < LENGTH)
+      6.1. IF (CHR==STR[LOOP]) , set COUNT = COUNT+1
+   7. Print count
 
 
 G. Fibonacci series of numbers
-1.
-acsdd
-fesfesfees
-jdsdcjcdnls
-nckjcnckjnkjdsnc
-kcndkjsndskjn
+   1. Initialize integers NUM1=0, NUM2=1, NEXT=0, LOOP=3;
+   2. Declare an integer LIMIT
+   3. Read LIMIT from user
+   4. Print NUM1 and NUM2
+   5. Repeat substeps WHILE (LOOP<=LIMIT)
+      5.1. Set NUM1=NUM2
+
+I. Linear search
+   1. Declare character KEY,and an integers LENGTH and LOOP
+   2. Declare an array NUMBERS of size LENGTH
+   3. Read inputs from user into NUMBERS
+   4. Read the character to be found as KEY
+   5. Set LOOP=0
+   6. Repeat sub-steps WHILE (LOOP < LENGTH)
+      1. IF (KEY==NUMBERS[LOOP]) , Print “KEY found at index LOOP”
+      2. Return
+   7. Print “KEY not found”
+
+
+J. Binary search
+   1. Declare integers START, END, MID, KEY, LENGTH
+   2. Read LENGTH from user
+   3. Declare an array ARR of size LENGTH
+   4. Read sorted input (ascending order) from user into ARR
+   5. WHILE(START<=END)
+      1. Set START=0, END=LENGTH 
+      2. Set MID=(START+END)/2
+      3. IF (KEY==ARR[MID]), Return Key
+      4. ELSE IF (KEY>MID), Set START=MID+1
+      5. ELSE, Set END=MID-1
+
+
+K. Bubble Sort
+   1. Initialize integers LOOP1=0, LOOP2=0
+   2. Declare AND INTEGER TEMP
+   3. Read LENGTH from user
+   4. Declare an array ARR of size LENGTH
+   5. WHILE (LOOP1<LENGTH-1)
+      1. WHILE (LOOP2<LOOP1-LENGTH-1)
+      2. IF ARR[LOOP2]>ARR[LOOP2+1], 
+         1. Set TEMP=ARR[LOOP2]
+         2. Set ARR[LOOP2]=ARR[LOOP1]
+         3. Set ARR[LOOP2]=TEMP
+   6. Return ARR
