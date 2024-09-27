@@ -27,14 +27,13 @@ B. Sum of squares of 2 numbers
 
 
 C. Reverse a number
-   1. Declare integers ‘LENGTH’ and ‘LOOP’
-   2. Declare an array named ‘NUMBER’ of size ‘LENGTH’
-   3. Set LOOP = LENGTH
-   4. Read input into ‘NUMBER’ array
-   5. Repeat sub-steps WHILE (LOOP >0)
-      5.1. Print NUMBER[i]
-      5.2. Increment LOOP by 1
-
+   1. Declare integers ‘NUMBER’ and ‘REVERSE’
+   2. Set REVERSE = 0
+   2. Read ‘NUMBER’ from user
+   3. Repeat sub-steps WHILE(NUMBER != 0)
+      3.1. REVERSE = (REVERSE * 10) + (NUMBER % 10)
+      3.2  NUMBER = NUMBER / 10
+   4.Return REVERSE
 
 D. Reverse a string
    1. Declare integers ‘LENGTH’ and ‘LOOP’
@@ -79,6 +78,18 @@ G. Fibonacci series of numbers
       6.2. Set NUM1=NUM2
       6.3  Set NUM2=NEXT
       6.4  Set NEXT=NUM1+NUM2
+
+H. Tower of Hanoi
+   Main :
+   1. Declare integer RINGS and characters FROM,TO,AUX
+   2. Read RINGS from user
+   3. Call TowerOfHanoi(RINGS,FROM,TO,AUX)
+   
+   TowerOfHanoi:
+   3. IF(RINGS == 0), return
+   4. Call TowerOfHanoi(RINGS-1,FROM,TO,AUX)
+   5. Print ("move ring RINGS from FROM to TO")
+   6. Call TowerOfHanoi(RINGS-1,FROM,TO,AUX)
 
 I. Linear search
    1. Declare character KEY,and an integers LENGTH and LOOP
