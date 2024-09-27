@@ -1,7 +1,7 @@
 --SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE';
 
 --CREATE TABLE: Creates an Employees table with columns for EmployeeID, FirstName, LastName, Department, and Salary.
-CREATE TABLE Employee(EmployeeID int PRIMARY KEY, FirstName varchar(20) NOT NULL, LastName varchar(20) NOT NULL, Department varchar(5),Salary decimal);
+CREATE TABLE Employee(EmployeeID int PRIMARY KEY, FirstName varchar(20) NOT NULL, LastName varchar(20) NOT NULL, Department varchar(5),Salary decimal(10,2));
 
 --INSERT: Adds three employee records to the table.
 INSERT INTO Employee VALUES
