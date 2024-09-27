@@ -1,7 +1,7 @@
 --SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE';
 
 --CREATE TABLE: Creates an Employees table with columns for EmployeeID, FirstName, LastName, Department, and Salary.
-CREATE TABLE Employee(EmployeeID int primary key, FirstName varchar(20), LastName varchar(20),Department varchar(5),Salary int);
+CREATE TABLE Employee(EmployeeID int PRIMARY KEY, FirstName varchar(20) NOT NULL, LastName varchar(20) NOT NULL, Department varchar(5),Salary decimal);
 
 --INSERT: Adds three employee records to the table.
 INSERT INTO Employee VALUES
@@ -19,7 +19,7 @@ SELECT FirstName,Department FROM employee;
 SELECT EmployeeID,LastName,Salary FROM employee;
 
 --Select with a WHERE clause to filter results
-SELECT FirstName,Department,Salary FROM employee WHERE(Salary > 22000);
+SELECT FirstName,Department,Salary FROM employee WHERE Salary > 22000;
 SELECT FirstName FROM employee WHERE(Department='HR');
 
 --What is the purpose of the IDENTITY keyword in the CREATE TABLE statement?
