@@ -20,7 +20,7 @@ SELECT EmployeeID,LastName,Salary FROM employee;
 
 --Select with a WHERE clause to filter results
 SELECT FirstName,Department,Salary FROM employee WHERE Salary > 22000;
-SELECT FirstName FROM employee WHERE(Department='HR');
+SELECT FirstName FROM employee WHERE Department='HR';
 
 --What is the purpose of the IDENTITY keyword in the CREATE TABLE statement?
 --The identitiy property is used to assign unique values to  each member of the column when a new row is created. 
