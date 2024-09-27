@@ -49,3 +49,8 @@ SELECT c.State, SUM(s.Quantity * s.UnitPrice) as TotalRevenue  FROM Sales s JOIN
 SELECT s.ProductID, p.ProductName ,SUM(Quantity) AS TotalQty FROM Sales s JOIN Products p ON s.ProductID=p.ProductID GROUP BY s.ProductID,p.ProductName HAVING SUM(Quantity)>100 ; 
 
 --For each customer, find the date of their first purchase and the date of their most recent purchase.
+Select c.CustomerName, MIN(s.SaleDate) AS FirstBuy,MAX(s.SaleDate) AS RecentBuy FROM Customers c JOIN Sales s ON s.CustomerID = c.CustomerID GROUP BY c.CustomerName;
+
+--Find the customers who have made purchases on at least 5 different dates. Display the CustomerID and the count of distinct purchase dates.
+Select c.CustomerName  FROM Customers c JOIN Sales s ON s.CustomerID = c.CustomerID  GROUP BY c.CustomerName HAVING COUNT(DISTINCT s.SaleID)>5;
+
