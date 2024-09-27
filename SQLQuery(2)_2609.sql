@@ -43,4 +43,9 @@ SELECT MONTH(SaleDate) AS MonthofSale ,COUNT(SaleID) FROM Sales WHERE YEAR(SaleD
 SELECT c.State, SUM(s.Quantity * s.UnitPrice) as TotalRevenue  FROM Sales s JOIN Customers c ON s.CustomerID=c.CustomerID GROUP BY c.State HAVING SUM(s.Quantity * s.UnitPrice)>10000 ;
 
 
+--Find products that have been sold more than 100 times in total. Display the ProductID, ProductName, and the total quantity sold.
+--SELECT ProductId,  SUM(Quantity) AS TotalQty FROM Sales GROUP BY ProductID HAVING SUM(Quantity)>100 ; 
+--SELECT s.ProductID,  SUM(Quantity) AS TotalQty FROM Sales s JOIN Products p ON s.ProductID=p.ProductID GROUP BY s.ProductID HAVING SUM(Quantity)>100 ; 
+SELECT s.ProductID, p.ProductName ,SUM(Quantity) AS TotalQty FROM Sales s JOIN Products p ON s.ProductID=p.ProductID GROUP BY s.ProductID,p.ProductName HAVING SUM(Quantity)>100 ; 
 
+--For each customer, find the date of their first purchase and the date of their most recent purchase.
