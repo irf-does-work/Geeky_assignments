@@ -57,3 +57,55 @@ UPDATE Subscriptions SET EndDate = EOMONTH(EndDate);
 
 --55. Display the current date and time.
 SELECT GETDATE();
+
+--56. Compare the results of two different methods to get the current timestamp - are they always the same?
+SELECT GETDATE();
+SELECT SYSDATETIME();
+--SELECT CURRENT_TIMESTAMP;
+--There is a difference in precision. GETDATE() returns a datetime value which is precise upto milliseconds and SYSDATETIME() returns a datetime2 value which is precise upto nanoseconds.
+
+--57. Get the current date and time with higher precision than standard methods.
+SELECT SYSDATETIME();
+
+--58. Write a query to insert the current high-precision timestamp into a 'Logs' table.
+INSERT INTO Logs VALUES (SYSDATETIME());
+
+--59. Display the current UTC date and time with high precision.
+SELECT SYSUTCDATETIME();
+
+--60. Calculate the difference in microseconds between the current local time and UTC time.
+SELECT DATEDIFF (MICROSECOND,SYSDATETIME(),SYSUTCDATETIME());
+
+--61. Get the current date, time, and time zone offset.
+SELECT SYSDATETIMEOFFSET();
+
+--62. From a 'GlobalEvents' table, convert all event times to include time zone offset information.
+UPDATE GlobalEvents SET EventTime = CONVERT(datetimeoffset,EventTime);
+
+--63. Extract the month number from the date '2023-12-25'.
+SELECT MONTH('2023-12-25');
+
+--64. From a 'Sales' table, find the total sales for each month of the previous year.
+SELECT MONTH(SaleDate) AS Month, SUM(Quantity * UnitPrice) AS TotalSale FROM Sales WHERE (DATEDIFF(YEAR,SaleDate,GETUTCDATE())=1) GROUP BY MONTH(SaleDate);
+
+--65. Extract the day of the month from '2023-03-15'.
+SELECT DAY('2023-03-15');
+
+--66. Write a query to find all orders from an 'Orders' table that were placed on the 15th day of any month.
+SELECT * FROM Orders WHERE DAY(OrderDate)=15;
+
+--67. Get the name of the month for the date '2023-09-01'.
+SELECT MONTH('2023-09-01');
+
+--68. From an 'Events' table, write a query to display the day of the week (in words) for each event date.
+SELECT DATENAME(WEEKDAY,EventDate) From Events;
+
+--69. Create a date for Christmas Day 2023.
+SELECT DATEFROMPARTS(2023,12,25); 
+
+--70. Write a query to convert separate year, month, and day columns from a 'Dates' table into a single DATE column.
+ALTER TABLE EventDates ADD Dates date;
+UPDATE EventDates SET Dates = DATEFROMPARTS(year,month,date);
+
+
+
