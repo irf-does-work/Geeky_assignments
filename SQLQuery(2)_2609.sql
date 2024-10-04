@@ -31,7 +31,7 @@ SELECT ProductID, (Quantity * UnitPrice) AS SaleTotal FROM Sales;
 --Find the average quantity sold per sale for each product category.
 
 --SELECT p.Category, AVG(s.Quantity) from Sales s JOIN Products p ON s.ProductID = p.ProductID GROUP BY P.Category;
-SELECT p.Category, AVG(s.Quantity) AS AvgSale from Sales s RIGHT JOIN Products p ON s.ProductID = p.ProductID GROUP BY P.Category;
+SELECT p.Category, COALESCE(AVG(s.Quantity),0) AS AvgSale from Sales s RIGHT JOIN Products p ON s.ProductID = p.ProductID GROUP BY P.Category;
 
 --List the top 5 customers by their total purchase amount. Include the CustomerID and total purchase amount.
 SELECT TOP 5 s.CustomerID,/*CustomerName,*/ SUM(Quantity * UnitPrice)as TotalAmount FROM Sales s JOIN Customers c ON s.CustomerID=c.CustomerID GROUP BY s.CustomerID ORDER BY TotalAmount ;
