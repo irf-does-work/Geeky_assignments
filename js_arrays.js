@@ -1,0 +1,201 @@
+/*
+
+Given an array
+[
+  {
+    "FirstName": "John",
+    "LastName": "Doe",
+    "Age": 20,
+    "Department": "Computer Science"
+  },
+  {
+    "FirstName": "Jane",
+    "LastName": "Smith",
+    "Age": 22,
+    "Department": "Physics"
+  },
+  {
+    "FirstName": "Michael",
+    "LastName": "Johnson",
+    "Age": 21, 
+    "Department": "Mathematics"
+  },
+  {
+    "FirstName": "Sarah",
+    "LastName": "Williams",
+    "Age": 19,
+    "Department": "Computer Science"
+  },
+  {
+    "FirstName": "Robert",
+    "LastName": "Brown",
+    "Age": 23,
+    "Department": "Mathematics"
+  },
+  {
+    "FirstName": "Emily",
+    "LastName": "Davis",
+    "Age": 20,
+    "Department": "Computer Science"
+  }
+]
+ 
+ 
+Declare a variable containing the array given above.
+Using the array functions, do the following
+ 
+1. List the students whose department is computer science.
+2. List the first name of students whose age is greater than  21
+3. Check whether a student having a first name as Robert is present in the Computer Science Department. The result should be in boolean type
+ 
+      4. Check whether there is any student whose age is greater than 23 is studying in the Maths department.The result should be in boolean type
+ 
+     5. Check whether all the students are above an age group of 18.The result should be in boolean type.
+ 
+6. Assuming that there is only one student having a first name as John, Print his department name.
+ 
+ 
+Declare a variable with following array
+[
+  {
+    "MovieName": "The Great Adventure",
+    "ActorName": "John Smith",
+    "ReleaseDate": "2023-01-15"
+  },
+  {
+    "MovieName": "Mystery in the Woods",
+    "ActorName": "Emily Johnson",
+    "ReleaseDate": "2022-09-28"
+  },
+  {
+    "MovieName": "Love and Destiny",
+    "ActorName": "Michael Brown",
+    "ReleaseDate": "2023-05-02"
+  },
+  {
+    "MovieName": "City of Shadows",
+    "ActorName": "Sophia Williams",
+    "ReleaseDate": "2023-03-12"
+  },
+  {
+    "MovieName": "The Last Stand",
+    "ActorName": "William Davis",
+    "ReleaseDate": "2022-11-07"
+  },
+  {
+    "MovieName": "Echoes of Time",
+    "ActorName": "Olivia Wilson",
+    "ReleaseDate": "2022-12-19"
+  }
+]
+ 
+1. List the movie name along with the actor name of those movies released in the year 2022
+2. List the movie names released in the year 2023 where the actor is William Davis.
+3. Retrieve the Actor name and release date of the movie “The Last Stand”
+4. Check whether there is any movie in the list with actor name “John Doe”
+5. Display the count of movies where the actor name is "Sophia Williams"
+6. Insert an element
+		{
+   			 "MovieName": "The Final Stage",
+    			"ActorName": "John Doe",
+   	 		"ReleaseDate": "2022-08-11"
+ 		 }
+	as last element
+7. Check whether there exists any duplicate movie names present in the array
+8. Create a new array starting from the movie "City of Shadows"
+9. List the distinct actor names in array
+10. Insert an element
+		{
+   			 "MovieName": "Rich & Poor",
+    			"ActorName": "Johnie Walker",
+   	 		"ReleaseDate": "2023-08-11"
+ 		 }
+	as next element to movie “Love and Destiny”
+11. Display the count of distinct actor names in array
+12. Remove the movie named  "The Last Stand"
+13. Check whether all the movies are released after 2021 Dec 31
+14. Update movie named  "City of Shadows" ‘s release date as  "2023-03-13"
+15. Create a new array of movie names whose movie name length is greater than 10.
+
+
+*/
+
+
+var array = [
+    {
+      "FirstName": "John",
+      "LastName": "Doe",
+      "Age": 20,
+      "Department": "Computer Science"
+    },
+    {
+      "FirstName": "Jane",
+      "LastName": "Smith",
+      "Age": 22,
+      "Department": "Physics"
+    },
+    {
+      "FirstName": "Michael",
+      "LastName": "Johnson",
+      "Age": 21, 
+      "Department": "Mathematics"
+    },
+    {
+      "FirstName": "Sarah",
+      "LastName": "Williams",
+      "Age": 19,
+      "Department": "Computer Science"
+    },
+    {
+      "FirstName": "Robert",
+      "LastName": "Brown",
+      "Age": 23,
+      "Department": "Mathematics"
+    },
+    {
+      "FirstName": "Emily",
+      "LastName": "Davis",
+      "Age": 20,
+      "Department": "Computer Science"
+    }
+  ];
+
+  // 1. List the students whose department is computer science.
+  console.log("Department is computer science.");
+  const compSci = array.filter(x => x.Department.match("Computer Science"));
+  compSci.forEach(x => {
+    console.log(x);
+  });
+  console.log("");
+  
+  // 2. List the first name of students whose age is greater than  21
+  console.log("Age is greater than  21");
+  const olderThan21 = array.filter(x => x.Age > 21);
+  olderThan21.forEach(x =>{
+    console.log(x.FirstName);
+  });
+  console.log("");
+
+  //3. Check whether a student having a first name as Robert is present in the Computer Science Department. The result should be in boolean type
+  console.log("Robert is present in the Computer Science Department?");
+  var robertExists = array.some(x => x.FirstName == "Robert" && x.Department == "Computer Science");
+  console.log(robertExists);
+  console.log("");
+
+  //4. Check whether there is any student whose age is greater than 23 is studying in the Maths department.The result should be in boolean type
+  console.log("Age is greater than 23 is studying in the Maths department?");
+  var mathsGT23 = array.some(x => x.Age >23 && x.Department == "Mathematics");
+  console.log(mathsGT23);
+  console.log("");
+
+  //5. Check whether all the students are above an age group of 18.The result should be in boolean type.
+  console.log("Everyone older than 18?");
+  var allOlderthan18 = array.every(x => x.Age > 18);
+  console.log(allOlderthan18);
+  console.log("");
+
+  //6. Assuming that there is only one student having a first name as John, Print his department name.
+  console.log("Department of John");
+  var johnsDept = array.find(x => x.FirstName == "John");
+  console.log(johnsDept.Department);
+  console.log("");
