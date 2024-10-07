@@ -199,3 +199,105 @@ var array = [
   var johnsDept = array.find(x => x.FirstName == "John");
   console.log(johnsDept.Department);
   console.log("");
+
+
+
+//MOVIES
+
+
+
+  var movieArray =
+  [
+    {
+      "MovieName": "The Great Adventure",
+      "ActorName": "John Smith",
+      "ReleaseDate": "2023-01-15"
+    },
+    {
+      "MovieName": "Mystery in the Woods",
+      "ActorName": "Emily Johnson",
+      "ReleaseDate": "2022-09-28"
+    },
+    {
+      "MovieName": "Love and Destiny",
+      "ActorName": "Michael Brown",
+      "ReleaseDate": "2023-05-02"
+    },
+    {
+      "MovieName": "City of Shadows",
+      "ActorName": "Sophia Williams",
+      "ReleaseDate": "2023-03-12"
+    },
+    {
+      "MovieName": "The Last Stand",
+      "ActorName": "William Davis",
+      "ReleaseDate": "2022-11-07"
+    },
+    {
+      "MovieName": "Echoes of Time",
+      "ActorName": "Olivia Wilson",
+      "ReleaseDate": "2022-12-19"
+    }
+  ];
+
+  //1. List the movie name along with the actor name of those movies released in the year 2022
+  console.log("Movies and actors in 2022");
+  var moviesOf22 = movieArray.filter(x => new Date(x.ReleaseDate).getFullYear() == 2022);
+  moviesOf22.forEach(x => {
+    console.log(x.ActorName + " : " + x.MovieName);
+    });
+    console.log("");
+
+   //2. List the movie names released in the year 2023 where the actor is William Davis.
+   console.log("William Davis in 2023");
+   var williamIn23 = movieArray.filter( x => x.ActorName == "William Davis"  && new Date(x.ReleaseDate).getFullYear() == 2023);
+   williamIn23.forEach(x => {
+    console.log(x.MovieName);
+    });
+    console.log("");
+
+    //3. Retrieve the Actor name and release date of the movie “The Last Stand”
+    console.log("Actor of the last stand");
+    var actorOfTLS = movieArray.find(x => x.MovieName == "The Last Stand");
+    console.log("Actor Name: " +actorOfTLS.ActorName + "\nMovie Name: "+ actorOfTLS.MovieName );
+    console.log("");
+
+    //4.Check whether there is any movie in the list with actor name “John Doe”
+    console.log("Any movies of John Doe?");
+    var johnDoeMovies = movieArray.some(x => x.ActorName == "John Doe");
+    console.log(johnDoeMovies);
+    console.log("");
+
+    //5.Display the count of movies where the actor name is "Sophia Williams"
+    var sWMovies = movieArray.filter(x => x.ActorName == "Sophia Williams");
+    console.log("No. of Sophia Williams movies: " +sWMovies.length);
+    console.log("");
+
+    //6.Insert an element
+    movieArray.push({
+        "MovieName": "The Final Stage",
+        "ActorName": "John Doe",
+        "ReleaseDate": "2022-08-11"
+    });
+
+   //movieArray.forEach(x => console.log(x));    console.log("");
+
+
+   //7. Check whether there exists any duplicate movie names present in the array
+   movieArray.sort();
+   var duplicateMovies = false;
+   for (var i=1;i<movieArray.length;i++)
+   {
+    if(movieArray[i].MovieName == movieArray[i-1].MovieName)
+    {
+        duplicateMovies = true;
+    }
+   }
+   console.log("Any duplicate movie name exists? : " +duplicateMovies);
+
+   //8.List the distinct actor names in array
+   console.log("Distinct actors: ");
+   var distinctActors = movieArray.filter()
+
+
+
