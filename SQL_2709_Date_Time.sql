@@ -26,7 +26,7 @@ SELECT DATEADD(MONTH,3,GETDATE());
 SELECT EmpName, DATEADD(YEAR,65,DoB) as Retirement FROM Employees;
 
 --45. Calculate the number of days between '2023-01-01' and '2023-12-31'.
-SELECT DATEDIFF(DAY,2023-12-31,2023-01-01);
+SELECT DATEDIFF(DAY,2023-01-01,2023-12-31);
 
 --46. From an 'Orders' table, find the average number of days between order date and ship date.
 SELECT AVG(DATEDIFF(DAY,ShipDate,OrderDate));
@@ -95,7 +95,8 @@ SELECT DAY('2023-03-15');
 SELECT * FROM Orders WHERE DAY(OrderDate)=15;
 
 --67. Get the name of the month for the date '2023-09-01'.
-SELECT MONTH('2023-09-01');
+SELECT DATENAME(MONTH,'2023-09-01');
+
 
 --68. From an 'Events' table, write a query to display the day of the week (in words) for each event date.
 SELECT DATENAME(WEEKDAY,EventDate) From Events;
@@ -105,7 +106,7 @@ SELECT DATEFROMPARTS(2023,12,25);
 
 --70. Write a query to convert separate year, month, and day columns from a 'Dates' table into a single DATE column.
 ALTER TABLE EventDates ADD Dates date;
-UPDATE EventDates SET Dates = DATEFROMPARTS(year,month,date);
+UPDATE EventDates SET Dates = DATEFROMPARTS(year,month,day);
 
 
 
