@@ -36,7 +36,7 @@ SELECT DATALENGTH('') AS ByteCount;
 SELECT CHARINDEX('Server','Microsoft SQL Server');
 
 --12. From an 'Emails' table, write a query to extract the domain name from email addresses.
-SELECT RIGHT(EmailAddr, CHARINDEX('@',EmailAddr)) FROM Emails;
+SELECT RIGHT(emailid, CHARINDEX('@',REVERSE(emailid))-1) FROM Email;
 
 --13. Find the position of the first number in the string 'ABC123DEF456'.
 SELECT PATINDEX('%[0-9]%','ABC123DEF456');
@@ -99,7 +99,7 @@ SELECT LTRIM('   SQL Server');
 UPDATE Comments SET comment = LTRIM(comment);
 
 --33. Display the current date in the format 'dd-MM-yyyy'.
-SELECT FORMAT(GETDATE(), 'dd-ss-yyyy') ;
+SELECT FORMAT(GETDATE(), 'dd-mm-yyyy') ;
 
 --34. From an 'Orders' table with an 'OrderTotal' column, display the total as a currency with 2 decimal places.
 SELECT FORMAT(OrderTotal, 'C', 'en-IN') AS FormattedOrderTotal
