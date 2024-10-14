@@ -56,18 +56,18 @@ LEFT JOIN Patrons p ON l.PatronID = p.PatronID;
 
 -- 6. Show all books that have never been loaned, along with their author information.
 SELECT b.BookID, Title, a.AuthorID, AuthorName, BirthYear
-FROM Loans l RIGHT JOIN Books b ON l.BookID = b.BookID 
+FROM Books b LEFT JOIN Loans l ON l.BookID = b.BookID 
 JOIN Authors a ON a.AuthorID = b.AuthorID
 WHERE l.LoanID IS NULL;
 
 -- 7. List all patrons who have borrowed books in the last month, along with the books they've borrowed.
 SELECT l.PatronID, PatronName, l.BookID, Title, l.LoanDate
 FROM Loans l JOIN Patrons p ON l.PatronID = p.PatronID
-JOIN Books b ON b.BookID = l.BookID WHERE MONTH(l.ReturnDate)=MONTH(GETDATE())-1 AND YEAR(l.ReturnDate)=YEAR(GETDATE());
+JOIN Books b ON b.BookID = l.BookID WHERE MONTH(l.LoanDate)=MONTH(GETDATE())-1 AND YEAR(l.LoanDate)=YEAR(GETDATE());
 
 -- 8. Display all authors born after 1970 and their books, including those without any books in our collection.
 SELECT a.AuthorID, AuthorName, BirthYear, BookID, Title
-FROM Authors a LEFT JOIN Books b ON a.AuthorID = b.AuthorID WHERE BirthYear < 1970;
+FROM Authors a LEFT JOIN Books b ON a.AuthorID = b.AuthorID WHERE BirthYear > 1970;
 
 -- 9. Show all books published before 2000 and any associated loan information.
 SELECT B.BookID,Title,PublicationYear,LoanID, PatronID, LoanDate, ReturnDate
