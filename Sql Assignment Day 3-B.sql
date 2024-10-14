@@ -39,7 +39,7 @@ CREATE TABLE OrderDetails (
 -- Questions
 
 -- 1. List all products with their category names, including products without a category.
-SELECT ProductName,c.CategoryID 
+SELECT ProductName,c.CategoryName 
 FROM Products p 
 LEFT JOIN Categories c ON p.CategoryID = c.CategoryID; 
 
@@ -67,7 +67,7 @@ LEFT JOIN Products p ON p.ProductID = od.ProductID;
 -- 6. Show all products that have never been ordered, along with their category information.
 SELECT P.ProductID, ProductName, Price, c.CategoryID, CategoryName
 FROM Products p 
-LEFT JOIN OrderDetails od ON p.ProductID = od.OrderID 
+LEFT JOIN OrderDetails od ON p.ProductID = od.ProductID 
 LEFT JOIN Categories c ON c.CategoryID = p.CategoryID 
 WHERE od.OrderID IS NULL;
 
@@ -79,8 +79,8 @@ WHERE DATEPART(WEEK,o.OrderDate)=DATEPART(WEEK,GETDATE())-1 AND DATEPART(YEAR,o.
 
 -- 8. Display all categories with products priced over $100, including categories without such products.
 SELECT DISTINCT CategoryName
-FROM Categories c JOIN Products p ON c.CategoryID = p.CategoryID 
-WHERE P.Price>100;
+FROM Categories c LEFT JOIN Products p ON c.CategoryID = p.CategoryID 
+WHERE P.Price>100 OR p.ProductID IS NULL;
 
 -- 9. Show all orders placed before 2023 and any associated product information.
 SELECT o.OrderID,OrderDate,od.ProductID,ProductName,Price
