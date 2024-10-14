@@ -64,7 +64,7 @@ SELECT * FROM Doctors d JOIN Appointments a ON d.DoctorID = a.DoctorID JOIN Pati
 SELECT pr.PatientID,pa.PatientName,m.MedicationID,m.MedicationName FROM  Prescriptions pr JOIN Medications m ON pr.MedicationID = m.MedicationID JOIN Patients pa ON pa.PatientID = pr.PatientID WHERE YEAR(pa.DateOfBirth)<YEAR(GETDATE())-60;
 
 -- 9. Show all appointments from last year and any associated prescription information.
-SELECT * FROM Appointments a JOIN Prescriptions pr ON a.PatientID = pr.PatientID WHERE YEAR(AppointmentDate) = YEAR(GETDATE())-1;
+SELECT * FROM Appointments a LEFT JOIN Prescriptions pr ON a.PatientID = pr.PatientID WHERE YEAR(AppointmentDate) = YEAR(GETDATE())-1;
 
 -- 10. List all possible specialty-medication combinations, regardless of whether a doctor of that specialty has prescribed that medication.
 SELECT d.DoctorName, d.Specialty, m.MedicationName FROM Medications m CROSS JOIN Doctors d;
