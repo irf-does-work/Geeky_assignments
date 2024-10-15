@@ -1,0 +1,63 @@
+<form [formGroup]="employee" (ngSubmit)="onSubmit()">
+    
+    <label>First Name : </label>
+    <input id="firstName" type="text"  formControlName="firstName" > 
+    <div *ngIf="employee.controls.firstName.errors?.['required'] && (employee.controls.firstName.touched || employee.controls.firstName.dirty)">
+        Please enter a Name
+    </div>
+    <br>
+    
+    <label>Last Name : </label>
+    <input id="lastName" formControlName="lastName">
+    <div *ngIf="employee.controls.lastName.errors?.['required'] && (employee.controls.lastName.touched || employee.controls.lastName.dirty)">
+        Please enter a Name
+    </div>
+    <br>
+
+    <label>Email : </label>
+    <input id="email" formControlName="email">
+    <div *ngIf="employee.controls.email.errors?.['pattern'] && (employee.controls.email.touched || employee.controls.email.dirty)">
+        Enter a valid email 
+    </div>
+    <br>
+
+    <label>Phone No : </label>
+    <input id="phoneNo" formControlName="phoneNo">
+    <div *ngIf="employee.controls.phoneNo.errors?.['pattern'] && (employee.controls.phoneNo.touched || employee.controls.phoneNo.dirty)">
+    Enter a valid Phone Number
+    </div>
+    <br>
+
+    <form formGroupName="address">
+        <label>Address Line 1 : </label>
+        <input id="addressLine1" formControlName="addressLine1">
+        <br>
+        <label>Address Line 2 : </label>
+        <input id="addressLine2" formControlName="addressLine2">
+        <br>
+        <label>city : </label>
+        <input id="city" formControlName="city">
+        <br>
+    </form>
+
+    <label>Projects:</label>
+    <select id="projects" formControlName="projectList">
+        <option>Select Project</option>
+        <option *ngFor ="let item of projectList">{{item.name | activeProjectsPipe : item.isActive}}</option>
+    </select>
+    <br>
+    <button type="submit" [disabled]="employee.invalid">Submit</button>
+</form>
+
+<div *ngIf="submitted">
+    <h2>Entered Details</h2>
+    <p>Name: {{employee.value.firstName | uppercase}} {{employee.value.lastName | uppercase}}</p>
+    <p>Email: {{employee.value.email}} </p>
+    <p>Phone: {{employee.value.phoneNo}}</p>
+    <p>Address: {{employee.value.address?.addressLine1}},
+        {{employee.value.address?.addressLine2}},
+        {{employee.value.address?.city}}
+    </p>
+    <p>Current Project: {{employee.value.projectList}}</p>
+
+</div>
