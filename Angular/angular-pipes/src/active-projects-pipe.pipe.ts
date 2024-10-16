@@ -6,10 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ActiveProjectsPipePipe implements PipeTransform {
 
-  transform(value:string, projectStatus : boolean): any {
-    if (projectStatus ==true ){
-      return value;
-    }
+  transform(value:any): any {
+    var resultArray = value.filter((x: { isActive: boolean; })=> x.isActive == true)
+    console.log(resultArray)
+    return resultArray;
   }
-
 }
+
+

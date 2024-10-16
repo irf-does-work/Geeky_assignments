@@ -43,7 +43,7 @@
     <label>Projects:</label>
     <select id="projects" formControlName="projectList">
         <option>Select Project</option>
-        <option *ngFor ="let item of projectList">{{item.name | activeProjectsPipe : item.isActive}}</option>
+        <option *ngFor ="let item of projectList | activeProjectsPipe ">{{item.name}}</option>
     </select>
     <br>
     <button type="submit" [disabled]="employee.invalid">Submit</button>
