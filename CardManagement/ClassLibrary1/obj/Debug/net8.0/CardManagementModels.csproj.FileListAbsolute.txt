@@ -1,0 +1,14 @@
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\bin\Debug\net8.0\CardManagementModels.deps.json
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\bin\Debug\net8.0\CardManagementModels.runtimeconfig.json
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\bin\Debug\net8.0\CardManagementModels.dll
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\bin\Debug\net8.0\CardManagementModels.pdb
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\obj\Debug\net8.0\CardManagementModels.csproj.AssemblyReference.cache
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\obj\Debug\net8.0\CardManagementModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\obj\Debug\net8.0\CardManagementModels.AssemblyInfoInputs.cache
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\obj\Debug\net8.0\CardManagementModels.AssemblyInfo.cs
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\obj\Debug\net8.0\CardManagementModels.csproj.CoreCompileInputs.cache
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\obj\Debug\net8.0\CardManagementModels.dll
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\obj\Debug\net8.0\refint\CardManagementModels.dll
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\obj\Debug\net8.0\CardManagementModels.pdb
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\obj\Debug\net8.0\CardManagementModels.genruntimeconfig.cache
+C:\Users\irfan.shakir\Desktop\New Assignmets\ClassLibrary1\obj\Debug\net8.0\ref\CardManagementModels.dll
