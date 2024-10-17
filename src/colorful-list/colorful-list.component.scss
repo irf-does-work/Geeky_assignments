@@ -11,3 +11,27 @@ li{
     margin: 4px;
     padding:20px;
 }
+
+li:nth-child(1){
+    background-color: rgb(195, 143, 76);
+}
+
+li:nth-child(2){
+    background-color: rgb(170, 179, 101);
+}
+
+li:nth-child(3){
+    background-color: rgb(101, 179, 163)
+}
+
+li:nth-child(4){
+    background-color: rgb(101, 140, 179)
+}
+
+li:nth-child(5){
+    background-color: rgb(146, 101, 179)
+}
+
+li:nth-child(6){
+    background-color: rgb(179, 101, 101)
+}
