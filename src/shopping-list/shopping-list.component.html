@@ -1,0 +1,13 @@
+<h2>Shopping List</h2>
+<input id="input1" type="text" [(ngModel)] = "item" onfocus="this.value ='' ">
+<button (click)="newItem()"> Add Item </button>
+
+<ul>
+<li *ngFor="let item of itemList; let i = index">
+        {{item}}
+        <button (click)="deleteItem(i)">
+                Delete
+        </button>
+
+</li>
+</ul>
