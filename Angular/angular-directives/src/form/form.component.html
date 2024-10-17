@@ -55,7 +55,7 @@
 <div *ngIf="submitted">
     <h2>Entered Details</h2>
     <p appHoverColor>Name: {{employee.value.firstName | uppercase}} {{employee.value.lastName | uppercase}}</p>
-    <p *ngIf="employee.get('email')?.value?.match('@gmail')">Email: {{employee.value.email}} </p>
+    <p *appGmailCheck="employee.value.email!">Email: {{employee.value.email}} </p>
     <p>Phone: {{employee.value.phoneNo}}</p>
     <p>Address: {{employee.value.address?.addressLine1}},
         {{employee.value.address?.addressLine2}},

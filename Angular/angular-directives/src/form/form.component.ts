@@ -7,6 +7,7 @@ import { UpperCasePipe } from '@angular/common';
 import { ActiveProjectsPipePipe } from '../active-projects-pipe.pipe';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HoverColorDirective } from '../hover-color.directive';
+import { GmailCheckDirective } from '../gmail-check.directive';
 
 interface Iemployee{
   projectList :  FormControl<object| null>
@@ -27,7 +28,16 @@ interface Iaddress{
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule,UpperCasePipe,ActiveProjectsPipePipe,NgSelectModule,HoverColorDirective],
+  imports: [
+    ReactiveFormsModule,
+    CommonModule,
+    UpperCasePipe,
+    ActiveProjectsPipePipe,
+    NgSelectModule,
+    HoverColorDirective,
+    GmailCheckDirective
+  ],
+
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'
 })
