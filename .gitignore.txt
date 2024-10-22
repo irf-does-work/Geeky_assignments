@@ -1,0 +1,102 @@
+# Ignore Visual Studio directories and files
+.vscode/
+ConsoleApp1/.vs/
+ConsoleApp1/ConsoleApp1.sln
+ConsoleApp1/ConsoleApp1/App.config
+ConsoleApp1/ConsoleApp1/ConsoleApp1.csproj
+ConsoleApp1/ConsoleApp1/Properties/
+ConsoleApp1/ConsoleApp1/bin/
+ConsoleApp1/ConsoleApp1/obj/
+
+Odd_lt_50/.vs/
+Odd_lt_50/Odd_lt_50.sln
+Odd_lt_50/Odd_lt_50/App.config
+Odd_lt_50/Odd_lt_50/Odd_lt_50.csproj
+Odd_lt_50/Odd_lt_50/Properties/
+Odd_lt_50/Odd_lt_50/bin/
+Odd_lt_50/Odd_lt_50/obj/
+
+digit_square_sum/.vs/
+digit_square_sum/App.config
+digit_square_sum/Properties/
+digit_square_sum/bin/
+digit_square_sum/digit_square_sum.csproj
+digit_square_sum/digit_square_sum.sln
+digit_square_sum/obj/
+
+digitsum/.vs/
+digitsum/App.config
+digitsum/Properties/
+digitsum/bin/
+digitsum/digitsum.csproj
+digitsum/digitsum.sln
+digitsum/obj/
+
+reversenum/.vs/
+reversenum/reversenum2.sln
+reversenum/reversenum2/App.config
+reversenum/reversenum2/Properties/
+reversenum/reversenum2/bin/
+reversenum/reversenum2/obj/
+reversenum/reversenum2/reversenum2.csproj
+
+largestFrom3/.vs/
+largestFrom3/largestFrom3.sln
+largestFrom3/largestFrom3/App.config
+largestFrom3/largestFrom3/Properties/
+largestFrom3/largestFrom3/bin/
+largestFrom3/largestFrom3/largestFrom3.csproj
+largestFrom3/largestFrom3/obj/
+
+# Ignore Angular projects
+Angular/
+reactive-forms-app/
+
+# Ignore SQL files
+BookMyShow db design.sql
+Ecommerce db design.sql
+SQLQuery(1)_2609.sql
+SQLQuery(2)_2609.sql
+SQLQuery_2609.sql
+SQL_2709_Date_Time.sql
+SQL_2709_Date_Time_tables.sql
+SQL_2709_String_Functions.sql
+Sql Assignment Day 3-A (1).sql
+Sql Assignment Day 3-A (1)_tables.sql
+Sql Assignment Day 3-B.sql
+Sql Assignment Day 3-B_tables.sql
+Sql Assignment Day 3-C.sql
+Sql Assignment Day 3-C_tables.sql
+Uber db design.sql
+
+# Ignore other project directories
+AnimalsUsingAbstract/
+CalcUsingClassLibraries/
+Calculator/
+CardManagement.API/
+CardManagement.Application/
+CardManagement.Domain/
+CardManagement.Infrastructure/
+CardManagement2/
+
+EmpMgmt/
+EmpMgmt2/
+MathsOperations/
+MathsOperations2/
+Primes_till_100/
+
+Shape/
+ShapesUsingInterface/
+fibonacci/
+palindrome/
+pattern/
+prime_check/
+reverse_num_as_string/
+
+sports/
+tax/
+
+# Miscellaneous files and directories
+animals/
+html_js_1/
+js_arrays.js
