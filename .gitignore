@@ -73,10 +73,6 @@ Uber db design.sql
 AnimalsUsingAbstract/
 CalcUsingClassLibraries/
 Calculator/
-CardManagement.API/
-CardManagement.Application/
-CardManagement.Domain/
-CardManagement.Infrastructure/
 CardManagement2/
 
 EmpMgmt/
